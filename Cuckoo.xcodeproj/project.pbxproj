@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72005ACA1A66625F0016CF23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72005AC51A66625F0016CF23 /* MainViewController.m */; };
-		72005ACB1A66625F0016CF23 /* MapRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72005AC71A66625F0016CF23 /* MapRouteViewController.m */; };
+		72005ACB1A66625F0016CF23 /* MapRouteViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72005AC71A66625F0016CF23 /* MapRouteViewController.mm */; };
 		72005ACC1A66625F0016CF23 /* MapViewBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */; };
 		72005B121A66628B0016CF23 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72005B0C1A66628B0016CF23 /* mapapi.bundle */; };
 		72005B131A66628B0016CF23 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72005B0D1A66628B0016CF23 /* readme.txt */; };
@@ -58,7 +58,7 @@
 		72005AC41A66625F0016CF23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		72005AC51A66625F0016CF23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		72005AC61A66625F0016CF23 /* MapRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRouteViewController.h; sourceTree = "<group>"; };
-		72005AC71A66625F0016CF23 /* MapRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRouteViewController.m; sourceTree = "<group>"; };
+		72005AC71A66625F0016CF23 /* MapRouteViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapRouteViewController.mm; sourceTree = "<group>"; };
 		72005AC81A66625F0016CF23 /* MapViewBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewBaseViewController.h; sourceTree = "<group>"; };
 		72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewBaseViewController.m; sourceTree = "<group>"; };
 		72005ACF1A66628B0016CF23 /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				72005AC41A66625F0016CF23 /* MainViewController.h */,
 				72005AC51A66625F0016CF23 /* MainViewController.m */,
 				72005AC61A66625F0016CF23 /* MapRouteViewController.h */,
-				72005AC71A66625F0016CF23 /* MapRouteViewController.m */,
+				72005AC71A66625F0016CF23 /* MapRouteViewController.mm */,
 				72005AC81A66625F0016CF23 /* MapViewBaseViewController.h */,
 				72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */,
 			);
@@ -515,7 +515,7 @@
 			files = (
 				72005ACC1A66625F0016CF23 /* MapViewBaseViewController.m in Sources */,
 				72B0A6161A665C30008DA475 /* AppDelegate.mm in Sources */,
-				72005ACB1A66625F0016CF23 /* MapRouteViewController.m in Sources */,
+				72005ACB1A66625F0016CF23 /* MapRouteViewController.mm in Sources */,
 				72005ACA1A66625F0016CF23 /* MainViewController.m in Sources */,
 				72B0A6131A665C30008DA475 /* main.m in Sources */,
 			);
@@ -641,6 +641,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -661,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
