@@ -78,7 +78,7 @@
     }
     self.view.backgroundColor = [UIColor cyanColor];
     mMapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
-    [self.view addSubview:mMapView];
+    self.view = mMapView;
     mMapView.userTrackingMode = BMKUserTrackingModeFollow;//设置定位的状态
     mMapView.showsUserLocation = YES;//显示定位图层
     mMapView.zoomLevel=15;
