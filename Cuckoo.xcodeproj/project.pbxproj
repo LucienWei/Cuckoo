@@ -31,6 +31,8 @@
 		72005B451A667DA80016CF23 /* pin_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72005B3D1A667DA80016CF23 /* pin_green@2x.png */; };
 		72005B461A667DA80016CF23 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 72005B3E1A667DA80016CF23 /* pin_red.png */; };
 		72005B471A667DA80016CF23 /* pin_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72005B3F1A667DA80016CF23 /* pin_red@2x.png */; };
+		7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7229230D1A6D17AE00AD7ADD /* home_back@2x.png */; };
+		7261935C1A6D11D000071911 /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261935B1A6D11D000071911 /* RandomViewController.m */; };
 		7263A3E11A67507900725395 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DC1A67507900725395 /* Default-568h@2x.png */; };
 		7263A3E21A67507900725395 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DD1A67507900725395 /* Default.png */; };
 		7263A3E31A67507900725395 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DE1A67507900725395 /* Default@2x.png */; };
@@ -143,6 +145,9 @@
 		72005B3D1A667DA80016CF23 /* pin_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_green@2x.png"; sourceTree = "<group>"; };
 		72005B3E1A667DA80016CF23 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
 		72005B3F1A667DA80016CF23 /* pin_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_red@2x.png"; sourceTree = "<group>"; };
+		7229230D1A6D17AE00AD7ADD /* home_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_back@2x.png"; sourceTree = "<group>"; };
+		7261935A1A6D11D000071911 /* RandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomViewController.h; sourceTree = "<group>"; };
+		7261935B1A6D11D000071911 /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomViewController.m; sourceTree = "<group>"; };
 		7263A3DC1A67507900725395 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7263A3DD1A67507900725395 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7263A3DE1A67507900725395 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -199,6 +204,8 @@
 				72005AC71A66625F0016CF23 /* MapRouteViewController.mm */,
 				72005AC81A66625F0016CF23 /* MapViewBaseViewController.h */,
 				72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */,
+				7261935A1A6D11D000071911 /* RandomViewController.h */,
+				7261935B1A6D11D000071911 /* RandomViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -319,6 +326,7 @@
 		72005B371A667DA80016CF23 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7229230D1A6D17AE00AD7ADD /* home_back@2x.png */,
 				72005B381A667DA80016CF23 /* icon_nav_end.png */,
 				72005B391A667DA80016CF23 /* icon_nav_end@2x.png */,
 				72005B3A1A667DA80016CF23 /* icon_nav_start.png */,
@@ -491,6 +499,7 @@
 				72005B401A667DA80016CF23 /* icon_nav_end.png in Resources */,
 				72B0A6211A665C30008DA475 /* Images.xcassets in Resources */,
 				72005B411A667DA80016CF23 /* icon_nav_end@2x.png in Resources */,
+				7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */,
 				72005B441A667DA80016CF23 /* pin_green.png in Resources */,
 				72005B451A667DA80016CF23 /* pin_green@2x.png in Resources */,
 				72005B431A667DA80016CF23 /* icon_nav_start@2x.png in Resources */,
@@ -514,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72005ACC1A66625F0016CF23 /* MapViewBaseViewController.m in Sources */,
+				7261935C1A6D11D000071911 /* RandomViewController.m in Sources */,
 				72B0A6161A665C30008DA475 /* AppDelegate.mm in Sources */,
 				72005ACB1A66625F0016CF23 /* MapRouteViewController.mm in Sources */,
 				72005ACA1A66625F0016CF23 /* MainViewController.m in Sources */,
@@ -651,8 +661,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release-iphoneos",
-					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release-iphonesimulator",
+					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -672,8 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release-iphoneos",
-					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release-iphonesimulator",
+					"$(PROJECT_DIR)/Cuckoo/baiduSDK/Release$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
