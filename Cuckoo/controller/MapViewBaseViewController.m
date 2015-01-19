@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title=@"Map";
+    self.title=@"位置";
     if ([UIDevice currentDevice].systemVersion.floatValue < 7) {
         self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
     } else {
@@ -30,7 +30,7 @@
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }
 
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor blackColor];
     mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     self.view = mapView;
     mapView.userTrackingMode = BMKUserTrackingModeFollow;

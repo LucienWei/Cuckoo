@@ -58,7 +58,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title=@"Route";
+    self.title=@"路线";
     if ([UIDevice currentDevice].systemVersion.floatValue < 7) {
         self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
     } else {
@@ -76,9 +76,9 @@
     {
         self.navigationController.navigationBar.translucent = NO;
     }
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor blackColor];
     mMapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
-    self.view = mMapView;
+    [self.view addSubview:mMapView];
     mMapView.userTrackingMode = BMKUserTrackingModeFollow;//设置定位的状态
     mMapView.showsUserLocation = YES;//显示定位图层
     mMapView.zoomLevel=15;
@@ -114,6 +114,9 @@
     locService.delegate = self;
     geocodesearch.delegate = self;
     routesearch.delegate = self;
+    CLLocationCoordinate2D pt = CLLocationCoordinate2DMake(30.576032, 104.064457);
+    mEnd = [[BMKPlanNode alloc]init];
+    mEnd.pt = pt;
     
     [locService startUserLocationService];
 }
@@ -128,14 +131,18 @@
     geocodesearch.delegate = nil;
     routesearch.delegate = nil;
 }
-
+    
 -(void)onClickBusSearch
 {
     BMKTransitRoutePlanOption *transitRouteSearchOption = [[BMKTransitRoutePlanOption alloc]init];
-    transitRouteSearchOption.city= @"郑州市";
+    transitRouteSearchOption.city= @"成都市";
     transitRouteSearchOption.from = mStart;
     transitRouteSearchOption.to = mEnd;
-    [routesearch transitSearch:transitRouteSearchOption];
+    BOOL flag = [routesearch transitSearch:transitRouteSearchOption];
+    if (!flag) {
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"暂未检索到合适路线 @_@ " delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
 }
 
 -(void)onClickDriveSearch
@@ -143,7 +150,11 @@
     BMKDrivingRoutePlanOption *drivingRouteSearchOption = [[BMKDrivingRoutePlanOption alloc]init];
     drivingRouteSearchOption.from = mStart;
     drivingRouteSearchOption.to = mEnd;
-    [routesearch drivingSearch:drivingRouteSearchOption];
+    BOOL flag = [routesearch drivingSearch:drivingRouteSearchOption];
+    if (!flag) {
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"暂未检索到合适路线 @_@ " delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
 }
 
 -(void)onClickWalkSearch
@@ -151,11 +162,14 @@
     BMKWalkingRoutePlanOption *walkingRouteSearchOption = [[BMKWalkingRoutePlanOption alloc]init];
     walkingRouteSearchOption.from = mStart;
     walkingRouteSearchOption.to = mEnd;
-    [routesearch walkingSearch:walkingRouteSearchOption];
+    BOOL flag = [routesearch walkingSearch:walkingRouteSearchOption];
+    if (!flag) {
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"暂未检索到合适路线 @_@ " delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
 }
 - (UIImage*)imageRotatedByDegrees:(UIImage*)image  degree:(CGFloat)degrees
 {
-    
     CGFloat width = CGImageGetWidth(image.CGImage);
     CGFloat height = CGImageGetHeight(image.CGImage);
     
@@ -267,16 +281,16 @@
 #pragma mark BMKMapViewDelegate
 -(void)mapview:(BMKMapView *)mapView onLongClick:(CLLocationCoordinate2D)coordinate
 {
-    NSLog(@"选中位置坐标: (%f,%f)", coordinate.latitude, coordinate.longitude);
-    BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
-    item.coordinate = coordinate;
-    [mMapView addAnnotation:item];
-    [mMapView setCenterCoordinate:coordinate animated:YES];
-    
-    mStart = [[BMKPlanNode alloc]init];
-    mStart.pt = locService.userLocation.location.coordinate;
-    mEnd = [[BMKPlanNode alloc]init];
-    mEnd.pt = coordinate;
+//    NSLog(@"选中位置坐标: (%f,%f)", coordinate.latitude, coordinate.longitude);
+//    BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
+//    item.coordinate = coordinate;
+//    [mMapView addAnnotation:item];
+//    [mMapView setCenterCoordinate:coordinate animated:YES];
+//     CLLocationCoordinate2D pt = CLLocationCoordinate2DMake(30.576032, 104.064457);
+//    mStart = [[BMKPlanNode alloc]init];
+//    mStart.pt = locService.userLocation.location.coordinate;
+//    mEnd = [[BMKPlanNode alloc]init];
+//    mEnd.pt = coordinate;
 }
 //根据anntation生成对应的View
 - (BMKAnnotationView *)mapView:(BMKMapView *)view viewForAnnotation:(id <BMKAnnotation>)annotation
@@ -494,6 +508,16 @@
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
     [mMapView updateLocationData:userLocation];
+    [locService stopUserLocationService];
+    
+    mStart = [[BMKPlanNode alloc]init];
+    mStart.pt = locService.userLocation.location.coordinate;
+    
+    // 开始搜索路线
+    [self onClickDriveSearch];
+    
+    NSLog(@"定位成功 关闭定位....  当前位置: (%f, %f)", userLocation.location.coordinate.longitude, userLocation.location.coordinate.latitude);
+    
 }
 - (void)didStopLocatingUser
 {
