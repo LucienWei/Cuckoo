@@ -66,7 +66,6 @@ static SystemSoundID shake_sound_male_id = 0;
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     if (motion == UIEventSubtypeMotionShake && event.type == UIEventTypeMotion) {
         NSLog(@"开始摇动");
-
     }
 }
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
@@ -88,7 +87,10 @@ static SystemSoundID shake_sound_male_id = 0;
     }
 }
 -(void)showShakeResult{
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"本次中奖的是:　@_@ " delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    NSInteger maxNum = 10;
+    NSInteger num = (arc4random() % maxNum ) + 1;
+    NSString * message = [NSString stringWithFormat:@"本次中奖的是:　第%d号 ", num];
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [alertView show];
 }
 - (void)shakeImageView{

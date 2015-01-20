@@ -31,23 +31,24 @@
     
     if ([UIDevice currentDevice].systemVersion.floatValue<7) {
         baseView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"位置" image:nil tag:1];
-        [baseView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"pin_green.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"pin_red.png"]];
+        [baseView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tb_map.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tb_map.png"]];
         
         routeView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"路线" image:nil tag:2];
-        [routeView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"icon_nav_start.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_nav_end.png"]];
+        [routeView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tb_route.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tb_route.png"]];
         
         randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"抽奖" image:nil tag:3];
-        [randomView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"icon_nav_end.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_nav_end.png"]];
+        [randomView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"shaizi.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shaizi.png"]];
     } else {
-        baseView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"位置" image:[UIImage imageNamed:@"pin_green.png"] selectedImage:[[UIImage imageNamed:@"pin_red.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        baseView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"位置" image:[UIImage imageNamed:@"tb_map.png"] selectedImage:[[UIImage imageNamed:@"tb_map.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
-        routeView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"路线" image:[UIImage imageNamed:@"icon_nav_start.png"] selectedImage:[[UIImage imageNamed:@"icon_nav_start.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        routeView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"路线" image:[UIImage imageNamed:@"tb_route.png"] selectedImage:[[UIImage imageNamed:@"tb_route.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
-        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"抽奖" image:[UIImage imageNamed:@"icon_nav_end.png"] selectedImage:[[UIImage imageNamed:@"icon_nav_end.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"抽奖" image:[UIImage imageNamed:@"shaizi.png"] selectedImage:[[UIImage imageNamed:@"shaizi.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     }
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor blackColor]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor whiteColor]} forState:UIControlStateSelected];
-    [self.tabBar setBarTintColor:[UIColor grayColor]];
+    [self.tabBar setBarTintColor:MY_COLOR_ORANGE];
+    [self.tabBar setBackgroundColor:MY_COLOR_ORANGE];
     NSArray*views = @[nav1, nav2, nav3];
     self.viewControllers = views;
     
