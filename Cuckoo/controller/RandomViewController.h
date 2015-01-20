@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BMapKit.h"
-
-@interface RandomViewController : UITabBarController
+@interface RandomViewController : UIViewController
 
 @end

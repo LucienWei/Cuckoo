@@ -32,11 +32,6 @@ static SystemSoundID shake_sound_male_id = 0;
     }
     self.view.backgroundColor = [UIColor blackColor];
     
-    NSMutableDictionary*dict=[NSMutableDictionary dictionary];
-    [dict setObject:[UIFont fontWithName:@"HelveticaNeue" size:17] forKey:NSFontAttributeName];
-    [dict setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    [[UINavigationBar appearance] setTitleTextAttributes:dict];
-    
     UIImageView *bgImageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_back.png"]];
     [self.view addSubview:bgImageview];
 

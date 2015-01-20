@@ -67,10 +67,6 @@
         self.navigationController.navigationBar.translucent = NO;
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }
-    NSMutableDictionary*dict=[NSMutableDictionary dictionary];
-    [dict setObject:[UIFont fontWithName:@"HelveticaNeue" size:17] forKey:NSFontAttributeName];
-    [dict setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    [[UINavigationBar appearance] setTitleTextAttributes:dict];
 
     self.view.backgroundColor = [UIColor blackColor];
     mMapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
