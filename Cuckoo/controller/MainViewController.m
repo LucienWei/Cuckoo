@@ -36,14 +36,14 @@
         routeView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"路线" image:nil tag:2];
         [routeView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tb_route.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tb_route.png"]];
         
-        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"抽奖" image:nil tag:3];
+        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"开奖" image:nil tag:3];
         [randomView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"shaizi.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shaizi.png"]];
     } else {
         baseView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"位置" image:[UIImage imageNamed:@"tb_map.png"] selectedImage:[[UIImage imageNamed:@"tb_map.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
         routeView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"路线" image:[UIImage imageNamed:@"tb_route.png"] selectedImage:[[UIImage imageNamed:@"tb_route.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
-        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"抽奖" image:[UIImage imageNamed:@"shaizi.png"] selectedImage:[[UIImage imageNamed:@"shaizi.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        randomView.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"开奖" image:[UIImage imageNamed:@"shaizi.png"] selectedImage:[[UIImage imageNamed:@"shaizi.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     }
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor blackColor]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor whiteColor]} forState:UIControlStateSelected];

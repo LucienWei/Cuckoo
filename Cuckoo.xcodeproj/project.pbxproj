@@ -28,6 +28,10 @@
 		7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7229230D1A6D17AE00AD7ADD /* home_back@2x.png */; };
 		724757701A6E233D00DB78FB /* shaizi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7247576F1A6E233D00DB78FB /* shaizi@2x.png */; };
 		724757721A6E269700DB78FB /* tb_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 724757711A6E269700DB78FB /* tb_map@2x.png */; };
+		724757751A6E2BF100DB78FB /* AddMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724757731A6E2BF100DB78FB /* AddMemberViewController.m */; };
+		724757771A6E2D9F00DB78FB /* none@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 724757761A6E2D9F00DB78FB /* none@2x.png */; };
+		7247577A1A6E31D400DB78FB /* ShowImgFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 724757791A6E31D400DB78FB /* ShowImgFullViewController.m */; };
+		7247577C1A6E480800DB78FB /* result@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7247577B1A6E480800DB78FB /* result@2x.png */; };
 		7261935C1A6D11D000071911 /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261935B1A6D11D000071911 /* RandomViewController.m */; };
 		726388A11A6DE19B0094C4CB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726388A01A6DE19B0094C4CB /* AudioToolbox.framework */; };
 		726388A31A6DE36B0094C4CB /* glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 726388A21A6DE36B0094C4CB /* glass.wav */; };
@@ -135,6 +139,12 @@
 		7229230D1A6D17AE00AD7ADD /* home_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_back@2x.png"; sourceTree = "<group>"; };
 		7247576F1A6E233D00DB78FB /* shaizi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shaizi@2x.png"; sourceTree = "<group>"; };
 		724757711A6E269700DB78FB /* tb_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tb_map@2x.png"; sourceTree = "<group>"; };
+		724757731A6E2BF100DB78FB /* AddMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemberViewController.m; sourceTree = "<group>"; };
+		724757741A6E2BF100DB78FB /* AddMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemberViewController.h; sourceTree = "<group>"; };
+		724757761A6E2D9F00DB78FB /* none@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "none@2x.png"; sourceTree = "<group>"; };
+		724757781A6E31D400DB78FB /* ShowImgFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowImgFullViewController.h; sourceTree = "<group>"; };
+		724757791A6E31D400DB78FB /* ShowImgFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowImgFullViewController.m; sourceTree = "<group>"; };
+		7247577B1A6E480800DB78FB /* result@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "result@2x.png"; sourceTree = "<group>"; };
 		7261935A1A6D11D000071911 /* RandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomViewController.h; sourceTree = "<group>"; };
 		7261935B1A6D11D000071911 /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomViewController.m; sourceTree = "<group>"; };
 		726388A01A6DE19B0094C4CB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -194,6 +204,10 @@
 				72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */,
 				7261935A1A6D11D000071911 /* RandomViewController.h */,
 				7261935B1A6D11D000071911 /* RandomViewController.m */,
+				724757741A6E2BF100DB78FB /* AddMemberViewController.h */,
+				724757731A6E2BF100DB78FB /* AddMemberViewController.m */,
+				724757781A6E31D400DB78FB /* ShowImgFullViewController.h */,
+				724757791A6E31D400DB78FB /* ShowImgFullViewController.m */,
 				72EBA7561A6E03E000FD260A /* UtilDefine.h */,
 			);
 			path = controller;
@@ -316,6 +330,8 @@
 		72005B371A667DA80016CF23 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				724757761A6E2D9F00DB78FB /* none@2x.png */,
+				7247577B1A6E480800DB78FB /* result@2x.png */,
 				7247576F1A6E233D00DB78FB /* shaizi@2x.png */,
 				724757711A6E269700DB78FB /* tb_map@2x.png */,
 				72EBA7521A6DF9B200FD260A /* shake_image@2x.png */,
@@ -468,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724757771A6E2D9F00DB78FB /* none@2x.png in Resources */,
 				72005B131A66628B0016CF23 /* readme.txt in Resources */,
 				726388A31A6DE36B0094C4CB /* glass.wav in Resources */,
 				72005B121A66628B0016CF23 /* mapapi.bundle in Resources */,
@@ -477,6 +494,7 @@
 				72005B411A667DA80016CF23 /* icon_nav_end@2x.png in Resources */,
 				7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */,
 				72005B431A667DA80016CF23 /* tb_route@2x.png in Resources */,
+				7247577C1A6E480800DB78FB /* result@2x.png in Resources */,
 				724757701A6E233D00DB78FB /* shaizi@2x.png in Resources */,
 				724757721A6E269700DB78FB /* tb_map@2x.png in Resources */,
 			);
@@ -497,10 +515,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				72005ACC1A66625F0016CF23 /* MapViewBaseViewController.m in Sources */,
+				724757751A6E2BF100DB78FB /* AddMemberViewController.m in Sources */,
 				7261935C1A6D11D000071911 /* RandomViewController.m in Sources */,
 				72B0A6161A665C30008DA475 /* AppDelegate.mm in Sources */,
 				72005ACB1A66625F0016CF23 /* MapRouteViewController.mm in Sources */,
 				72005ACA1A66625F0016CF23 /* MainViewController.m in Sources */,
+				7247577A1A6E31D400DB78FB /* ShowImgFullViewController.m in Sources */,
 				72B0A6131A665C30008DA475 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

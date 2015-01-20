@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface RandomViewController : UIViewController
+#import "AddMemberViewController.h"
+
+@interface RandomViewController : UIViewController<AddMemberDelegate>
 
 @end
