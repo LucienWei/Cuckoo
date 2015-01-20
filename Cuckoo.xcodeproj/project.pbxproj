@@ -33,17 +33,14 @@
 		72005B471A667DA80016CF23 /* pin_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72005B3F1A667DA80016CF23 /* pin_red@2x.png */; };
 		7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7229230D1A6D17AE00AD7ADD /* home_back@2x.png */; };
 		7261935C1A6D11D000071911 /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261935B1A6D11D000071911 /* RandomViewController.m */; };
-		7263A3E11A67507900725395 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DC1A67507900725395 /* Default-568h@2x.png */; };
-		7263A3E21A67507900725395 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DD1A67507900725395 /* Default.png */; };
-		7263A3E31A67507900725395 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DE1A67507900725395 /* Default@2x.png */; };
-		7263A3E41A67507900725395 /* icon*57.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3DF1A67507900725395 /* icon*57.png */; };
-		7263A3E51A67507900725395 /* icon*57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263A3E01A67507900725395 /* icon*57@2x.png */; };
+		726388A11A6DE19B0094C4CB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726388A01A6DE19B0094C4CB /* AudioToolbox.framework */; };
+		726388A31A6DE36B0094C4CB /* glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 726388A21A6DE36B0094C4CB /* glass.wav */; };
 		72B0A6131A665C30008DA475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B0A6121A665C30008DA475 /* main.m */; };
 		72B0A6161A665C30008DA475 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72B0A6151A665C30008DA475 /* AppDelegate.mm */; };
-		72B0A61F1A665C30008DA475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A61D1A665C30008DA475 /* Main.storyboard */; };
 		72B0A6211A665C30008DA475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A6201A665C30008DA475 /* Images.xcassets */; };
 		72B0A6241A665C30008DA475 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A6221A665C30008DA475 /* LaunchScreen.xib */; };
 		72B0A6301A665C30008DA475 /* CuckooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B0A62F1A665C30008DA475 /* CuckooTests.m */; };
+		72EBA7531A6DF9B200FD260A /* shake_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72EBA7521A6DF9B200FD260A /* shake_image@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,22 +145,20 @@
 		7229230D1A6D17AE00AD7ADD /* home_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_back@2x.png"; sourceTree = "<group>"; };
 		7261935A1A6D11D000071911 /* RandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomViewController.h; sourceTree = "<group>"; };
 		7261935B1A6D11D000071911 /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomViewController.m; sourceTree = "<group>"; };
-		7263A3DC1A67507900725395 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7263A3DD1A67507900725395 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7263A3DE1A67507900725395 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7263A3DF1A67507900725395 /* icon*57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon*57.png"; sourceTree = "<group>"; };
-		7263A3E01A67507900725395 /* icon*57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon*57@2x.png"; sourceTree = "<group>"; };
+		726388A01A6DE19B0094C4CB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		726388A21A6DE36B0094C4CB /* glass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glass.wav; sourceTree = "<group>"; };
 		72B0A60D1A665C30008DA475 /* Cuckoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuckoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B0A6111A665C30008DA475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B0A6121A665C30008DA475 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72B0A6141A665C30008DA475 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72B0A6151A665C30008DA475 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		72B0A61E1A665C30008DA475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72B0A6201A665C30008DA475 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		72B0A6231A665C30008DA475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		72B0A6291A665C30008DA475 /* CuckooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuckooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B0A62E1A665C30008DA475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B0A62F1A665C30008DA475 /* CuckooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CuckooTests.m; sourceTree = "<group>"; };
+		72EBA7521A6DF9B200FD260A /* shake_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake_image@2x.png"; sourceTree = "<group>"; };
+		72EBA7561A6E03E000FD260A /* UtilDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UtilDefine.h; path = Cuckoo/UtilDefine.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726388A11A6DE19B0094C4CB /* AudioToolbox.framework in Frameworks */,
 				72005B291A66631F0016CF23 /* UIKit.framework in Frameworks */,
 				72005B271A6663190016CF23 /* SystemConfiguration.framework in Frameworks */,
 				72005B251A66630C0016CF23 /* Security.framework in Frameworks */,
@@ -206,6 +202,7 @@
 				72005AC91A66625F0016CF23 /* MapViewBaseViewController.m */,
 				7261935A1A6D11D000071911 /* RandomViewController.h */,
 				7261935B1A6D11D000071911 /* RandomViewController.m */,
+				72EBA7561A6E03E000FD260A /* UtilDefine.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -309,6 +306,7 @@
 		72005B181A6662BA0016CF23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				726388A01A6DE19B0094C4CB /* AudioToolbox.framework */,
 				72005B161A6662B40016CF23 /* CoreGraphics.framework */,
 				72005B1A1A6662DC0016CF23 /* CoreLocation.framework */,
 				72005B1C1A6662E90016CF23 /* Foundation.framework */,
@@ -326,6 +324,7 @@
 		72005B371A667DA80016CF23 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				72EBA7521A6DF9B200FD260A /* shake_image@2x.png */,
 				7229230D1A6D17AE00AD7ADD /* home_back@2x.png */,
 				72005B381A667DA80016CF23 /* icon_nav_end.png */,
 				72005B391A667DA80016CF23 /* icon_nav_end@2x.png */,
@@ -368,7 +367,6 @@
 				72005B371A667DA80016CF23 /* images */,
 				72B0A6201A665C30008DA475 /* Images.xcassets */,
 				72B0A6221A665C30008DA475 /* LaunchScreen.xib */,
-				72B0A61D1A665C30008DA475 /* Main.storyboard */,
 				72B0A6101A665C30008DA475 /* Supporting Files */,
 			);
 			path = Cuckoo;
@@ -377,12 +375,8 @@
 		72B0A6101A665C30008DA475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7263A3DC1A67507900725395 /* Default-568h@2x.png */,
-				7263A3DD1A67507900725395 /* Default.png */,
-				7263A3DE1A67507900725395 /* Default@2x.png */,
-				7263A3DF1A67507900725395 /* icon*57.png */,
-				7263A3E01A67507900725395 /* icon*57@2x.png */,
 				72B0A6111A665C30008DA475 /* Info.plist */,
+				726388A21A6DE36B0094C4CB /* glass.wav */,
 				72B0A6121A665C30008DA475 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -486,18 +480,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7263A3E41A67507900725395 /* icon*57.png in Resources */,
-				7263A3E31A67507900725395 /* Default@2x.png in Resources */,
 				72005B131A66628B0016CF23 /* readme.txt in Resources */,
 				72005B471A667DA80016CF23 /* pin_red@2x.png in Resources */,
-				72B0A61F1A665C30008DA475 /* Main.storyboard in Resources */,
+				726388A31A6DE36B0094C4CB /* glass.wav in Resources */,
 				72005B121A66628B0016CF23 /* mapapi.bundle in Resources */,
-				7263A3E21A67507900725395 /* Default.png in Resources */,
 				72B0A6241A665C30008DA475 /* LaunchScreen.xib in Resources */,
-				7263A3E51A67507900725395 /* icon*57@2x.png in Resources */,
-				7263A3E11A67507900725395 /* Default-568h@2x.png in Resources */,
 				72005B401A667DA80016CF23 /* icon_nav_end.png in Resources */,
 				72B0A6211A665C30008DA475 /* Images.xcassets in Resources */,
+				72EBA7531A6DF9B200FD260A /* shake_image@2x.png in Resources */,
 				72005B411A667DA80016CF23 /* icon_nav_end@2x.png in Resources */,
 				7229230E1A6D17AE00AD7ADD /* home_back@2x.png in Resources */,
 				72005B441A667DA80016CF23 /* pin_green.png in Resources */,
@@ -550,14 +540,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		72B0A61D1A665C30008DA475 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72B0A61E1A665C30008DA475 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72B0A6221A665C30008DA475 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
