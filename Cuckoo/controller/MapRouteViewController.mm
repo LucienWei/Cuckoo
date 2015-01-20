@@ -64,6 +64,7 @@
     } else {
         self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
         self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.translucent = NO;
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }
     NSMutableDictionary*dict=[NSMutableDictionary dictionary];
@@ -71,11 +72,6 @@
     [dict setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
     
-    //适配ios7
-    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
-    {
-        self.navigationController.navigationBar.translucent = NO;
-    }
     self.view.backgroundColor = [UIColor blackColor];
     mMapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:mMapView];
@@ -323,7 +319,7 @@
     if (error == BMK_SEARCH_NO_ERROR) {
         BMKTransitRouteLine* plan = (BMKTransitRouteLine*)[result.routes objectAtIndex:0];
         // 计算路线方案中的路段数目
-        int size = [plan.steps count];
+        NSUInteger size = [plan.steps count];
         int planPointCounts = 0;
         for (int i = 0; i < size; i++) {
             BMKTransitStep* transitStep = [plan.steps objectAtIndex:i];
@@ -377,7 +373,7 @@
     if (error == BMK_SEARCH_NO_ERROR) {
         BMKDrivingRouteLine* plan = (BMKDrivingRouteLine*)[result.routes objectAtIndex:0];
         // 计算路线方案中的路段数目
-        int size = [plan.steps count];
+        NSUInteger size = [plan.steps count];
         int planPointCounts = 0;
         for (int i = 0; i < size; i++) {
             BMKDrivingStep* transitStep = [plan.steps objectAtIndex:i];
@@ -445,7 +441,7 @@
     [mMapView removeOverlays:array];
     if (error == BMK_SEARCH_NO_ERROR) {
         BMKWalkingRouteLine* plan = (BMKWalkingRouteLine*)[result.routes objectAtIndex:0];
-        int size = [plan.steps count];
+        NSUInteger size = [plan.steps count];
         int planPointCounts = 0;
         for (int i = 0; i < size; i++) {
             BMKWalkingStep* transitStep = [plan.steps objectAtIndex:i];
