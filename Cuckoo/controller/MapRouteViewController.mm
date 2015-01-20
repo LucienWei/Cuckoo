@@ -7,6 +7,7 @@
 //
 
 #import "MapRouteViewController.h"
+#import "UtilDefine.h"
 
 #define MYBUNDLE_NAME @ "mapapi.bundle"
 #define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
@@ -47,7 +48,6 @@
 @implementation MapRouteViewController
 - (NSString*)getMyBundlePath1:(NSString *)filename
 {
-    
     NSBundle * libBundle = MYBUNDLE ;
     if ( libBundle && filename ){
         NSString * s=[[libBundle resourcePath ] stringByAppendingPathComponent : filename];
@@ -60,10 +60,10 @@
     [super viewDidLoad];
     self.title=@"路线";
     if ([UIDevice currentDevice].systemVersion.floatValue < 7) {
-        self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.tintColor = MY_COLOR_ORANGE;
     } else {
-        self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
-        self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.barTintColor = MY_COLOR_ORANGE;
+        self.navigationController.navigationBar.tintColor = MY_COLOR_ORANGE;
         self.navigationController.navigationBar.translucent = NO;
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }
@@ -71,7 +71,7 @@
     [dict setObject:[UIFont fontWithName:@"HelveticaNeue" size:17] forKey:NSFontAttributeName];
     [dict setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
-    
+
     self.view.backgroundColor = [UIColor blackColor];
     mMapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
     [self.view addSubview:mMapView];

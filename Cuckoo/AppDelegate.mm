@@ -22,11 +22,11 @@ BMKMapManager* _mapManager;
     _mapManager = [[BMKMapManager alloc]init];
     [_mapManager start:@"vl3NKCc98mndTVZycIfgzS6C" generalDelegate:self];
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
     MainViewController*mainViewController = [[MainViewController alloc] init];
     self.window.rootViewController = mainViewController;
-    
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

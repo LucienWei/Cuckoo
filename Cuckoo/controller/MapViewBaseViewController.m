@@ -7,6 +7,7 @@
 //
 
 #import "MapViewBaseViewController.h"
+#import "UtilDefine.h"
 
 @interface MapViewBaseViewController ()
 {
@@ -22,10 +23,10 @@
     [super viewDidLoad];
     self.title=@"位置";
     if ([UIDevice currentDevice].systemVersion.floatValue < 7) {
-        self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.tintColor = MY_COLOR_ORANGE;
     } else {
-        self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
-        self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.barTintColor = MY_COLOR_ORANGE;
+        self.navigationController.navigationBar.tintColor = MY_COLOR_ORANGE;
         self.navigationController.navigationBar.translucent = NO;
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }

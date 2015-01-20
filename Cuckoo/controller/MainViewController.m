@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "UtilDefine.h"
 #import "MapViewBaseViewController.h"
 #import "MapRouteViewController.h"
 #import "RandomViewController.h"
@@ -39,15 +40,17 @@
         [randomView.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"icon_nav_end.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_nav_end.png"]];
     } else {
         baseView.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"位置" image:[UIImage imageNamed:@"pin_green.png"] selectedImage:[[UIImage imageNamed:@"pin_red.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
         routeView.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"路线" image:[UIImage imageNamed:@"icon_nav_start.png"] selectedImage:[[UIImage imageNamed:@"icon_nav_start.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
         randomView.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"抽奖" image:[UIImage imageNamed:@"icon_nav_end.png"] selectedImage:[[UIImage imageNamed:@"icon_nav_end.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     }
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor blackColor]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor blueColor]} forState:UIControlStateSelected];
-    [self.tabBar setBackgroundColor:[UIColor grayColor]];
-    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor whiteColor]} forState:UIControlStateSelected];
     NSArray*views=@[nav1, nav2, nav3];
     self.viewControllers=views;
+    
+    [self.tabBar setBackgroundColor:MY_COLOR_ORANGE];
 }
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
 
