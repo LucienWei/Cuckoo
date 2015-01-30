@@ -8,6 +8,7 @@
 
 #import "GestureViewController.h"
 #import "UtilDefine.h"
+#import "AFNetworking.h"
 
 @interface GestureViewController ()
 
@@ -81,6 +82,23 @@
     }
 }
 -(void)tapImageViews:(UITapGestureRecognizer*)tap{
+    UIImageView*imageView=(UIImageView*)tap.view;
+    BOOL isShow = imageView.frame.origin.x==5;
+    if (isShow) {
+        imageView.frame = CGRectMake(5, 5, 10, 10);
+    } else {
+        imageView.frame = CGRectMake(20, 20, 200, 200);
+    }
+    [UIView beginAnimations:@"animationID" context:nil];
+    [UIView setAnimationDuration:0.3f];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationRepeatAutoreverses:NO];
+    if (isShow) {
+        imageView.frame = CGRectMake(20, 20, 200, 200);
+    } else {
+        imageView.frame = CGRectMake(5, 5, 10, 10);
+    }
+    [UIView commitAnimations];
 }
 
 - (void)didReceiveMemoryWarning {
