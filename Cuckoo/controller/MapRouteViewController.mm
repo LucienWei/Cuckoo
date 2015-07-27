@@ -500,16 +500,18 @@
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
     [mMapView updateLocationData:userLocation];
-    [locService stopUserLocationService];
+//    [locService stopUserLocationService];
+//    mStart = [[BMKPlanNode alloc]init];
+//    mStart.pt = locService.userLocation.location.coordinate;
+//    // 开始搜索路线
+//    [self onClickDriveSearch];
+    NSLog(@"定位成功 关闭定位....  ");
+    NSLog(@"当前位置: (%f, %f)", userLocation.location.coordinate.longitude, userLocation.location.coordinate.latitude);
     
-    mStart = [[BMKPlanNode alloc]init];
-    mStart.pt = locService.userLocation.location.coordinate;
-    
-    // 开始搜索路线
-    [self onClickDriveSearch];
-    
-    NSLog(@"定位成功 关闭定位....  当前位置: (%f, %f)", userLocation.location.coordinate.longitude, userLocation.location.coordinate.latitude);
-    
+    BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
+    item.coordinate = userLocation.location.coordinate;
+    [mMapView addAnnotation:item];
+
 }
 - (void)didStopLocatingUser
 {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D75D66A2-4326-4E08-8D87-4859A2FA191A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Cuckoo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>29A0A701C66FF663724FBF0D467DDCFFF674B471</key>
+		<string>https://github.com/LucienWei/Cuckoo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Cuckoo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>29A0A701C66FF663724FBF0D467DDCFFF674B471</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LucienWei/Cuckoo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>29A0A701C66FF663724FBF0D467DDCFFF674B471</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>29A0A701C66FF663724FBF0D467DDCFFF674B471</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cuckoo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
